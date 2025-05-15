@@ -1,0 +1,43 @@
+{% include header.html %}
+<main id="blog">
+
+    {% if page.image %}
+    <div id="main-img">   
+        <img src="{{page.image}}">
+
+    </div>
+    {% endif %}
+
+        <div class="fourimg"> 
+            {% include four-images.html %}
+        </div>
+
+        <div id="contentblog">
+            <div id="content-head">
+                 <h2>{{page.title}}</h2>
+
+                <div class="navigation">
+                    {% include nav.html %}
+                 </div>
+            </div>
+
+            <div id="blogposts">
+                {% for post in site.posts %}
+                    <div class="post">
+                        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                        <p><strong>Date:</strong> {{ post.date }}</p>
+                        <p><strong>Categories:</strong> {{ post.categories | join: ', ' }}</p>
+                        <p>{{ post.excerpt }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+        
+        <div class="fourimg"> 
+            {% include four-images.html %}
+        </div>
+
+</main>
+
+{% include fotter.html %}

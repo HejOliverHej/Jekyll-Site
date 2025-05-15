@@ -1,0 +1,156 @@
+$bg-color: #0E3B52;
+$font-color: #F0E3A1;
+$home-font-height: 80px;
+$home-font-width: 30px;
+$h2-font-height: 60px;
+$h2-font-width: 580px;
+$h1-font-width: 500px;
+$home-content-font-size: 22px;
+
+body{
+    background-color: $bg-color;
+    overflow: hidden;
+}
+header{
+    height: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+  }
+main{
+    display: flex;
+    &#blog ,&#contact {
+        justify-content: space-between;
+    }
+}
+.bigimg img{
+    height: 100vh;
+    width: auto;
+}
+.homePANCAKESLOVER{
+    color:$font-color; 
+    padding: 100px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     
+     font-size: $home-content-font-size;
+ }
+h1 {
+    font-size: 90px;
+    width: $h1-font-width;
+    height: auto;
+}
+h2{
+    color: $font-color;
+    width: $h2-font-width;
+    height: $h2-font-height;
+    font-size: 60px;
+}
+.fourimg {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.small-square{
+    max-height: 25%;
+    width: auto;
+    object-fit: cover;
+}
+.navigation nav a{
+    color: $font-color;
+    text-decoration: none;
+    padding-left: 60px;
+    font-weight: bold;
+}
+.navigation{
+    position: absolute;
+    top: 60px;
+    left: 760px;
+    font-size: 30px;
+}
+#content-head{
+    height:20vh;
+}
+#blog {
+    height: 100vh; 
+    overflow-y: auto; 
+}
+#blogposts {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 20px auto; 
+    max-width: 800px; 
+    background-color: rgba(14, 59, 82, 0.8); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);    
+}
+.post {
+    width: 100%;
+    max-width: 700px; 
+    margin-bottom: 20px; 
+    padding: 15px;
+    background-color: #0E3B52; 
+    color: $font-color; 
+    border: 1px solid $font-color; 
+    border-radius: 8px; 
+    text-align: center; 
+}
+.post h2 {
+    font-size: 26px; 
+    margin-bottom: 10px;
+    color: #F0E3A1; 
+}
+.post p {
+    font-size: 16px; 
+    line-height: 1.6; 
+    color: $font-color; 
+    list-style-type: none;
+}
+ul {
+    list-style-type: none;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    background: #273549; 
+    border-radius: 100px;
+    height: auto;
+    padding: 50px;
+
+}
+label {
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #f1f5f9; 
+}
+input, textarea {
+    width: 100%; 
+    padding: 10px;
+    
+    border-radius: 4px;
+    background: #334155; 
+    color: #f1f5f9; 
+    font-size: 1em;
+    box-sizing: border-box; 
+}
+#contetcontact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.senddiv nav a {
+    color: $font-color;
+    text-decoration: none;
+    padding-left: 60px;
+    font-weight: bold;
+}
+
+
+
+
+

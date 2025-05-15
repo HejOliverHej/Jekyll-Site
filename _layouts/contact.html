@@ -1,0 +1,48 @@
+{% include header.html %}
+<main id="contact">
+
+    {% if page.image %}
+    <div id="main-img">   
+        <img src="{{page.image}}">
+
+    </div>
+    {% endif %}
+
+
+    <div class="fourimg"> 
+        {% include four-images.html %}
+    </div>
+
+        <div id="contetcontact">
+
+            <h2>{{page.title}}</h2>
+        
+            <div class="navigation">
+                {% include nav.html %}
+            </div>
+            
+            <section id="contact-form">
+                {% for field in page.input %}
+                <label for="{{ field | downcase }}">{{ field }}:</label>
+                {% if field == "Message" %}
+                    <textarea id="{{ field | downcase }}" name="{{ field | downcase }}" placeholder="Your {{ field | downcase }}" rows="4" required></textarea>
+                {% else %}
+                    <input type="text" id="{{ field | downcase }}" name="{{ field | downcase }}" placeholder="Your {{ field | downcase }}" required>
+                {% endif %}
+            {% endfor %}
+            <div class="senddiv">
+                 {% include navsend.html %}
+            </div>
+                    
+            
+
+            </section>
+        </div>
+
+        <div class="fourimg"> 
+            {% include four-images.html %}
+        </div>
+
+</main>
+
+{% include fotter.html %}
